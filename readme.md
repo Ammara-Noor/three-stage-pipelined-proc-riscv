@@ -45,6 +45,6 @@ This opens a waveform window. Pull the required signals in the waveform and veri
 ### Stage-1: Fetch
 `pc.sv`, `inst_mem.sv` and muxes are used in this stage. It's output is being stored in buffers.
 ### Stage-2: Decode and Execute
-`reg_file.sv`, `imm_gen.sv`, `alu.sv`, `branch_cond.sv` and muxes are used in this stage. The output of buffers from fetch stage is used as an input and this stage's output is being stored in next buffers.
+`reg_file.sv`, `imm_gen.sv`, `alu.sv`, `branch_cond.sv` and muxes are used in this stage. The output of buffers from the fetch stage is used as input in this stage and this stage's output is being stored in the next buffers.
 ### Stage-3: Memory and Writeback
-`data_mem.sv` and `sel_wb_mux` are used in this stage. The `waddr` of register file is taken from the buffers as this stage.
+`data_mem.sv` and `sel_wb_mux` are used in this stage. The `waddr` of register file is taken from the buffers at this stage.
